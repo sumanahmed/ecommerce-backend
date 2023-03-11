@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "a1b402c4-df29-41ea-a13c-d02a6cc9969f",
+		"name": "Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "passwrod",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "suman",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "suman4@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "369852",
+									"type": "text"
+								},
+								{
+									"key": "c_password",
+									"value": "369852",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Porudct List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOGIyMjg1ZWM2MjQ1MjQ2NTAyYjM1MDhkMThiNTI3M2VlYjA1MGM5YjQ0YTY2ZmRiMGUyMjE0NWY5MDQ3NTExY2I0ZGU1MzE1NzM5YWQ5ZTQiLCJpYXQiOjE2Nzg1MTQxNTguNjcxNzQ1LCJuYmYiOjE2Nzg1MTQxNTguNjcxNzQ5LCJleHAiOjE3MTAxMzY1NTguNjE5ODM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.FN6kVscQU9kd1ECgBi75eGUDlKQ8sXC6w4EJwytA0YWxwIDPDsyje0CuOrY1gCCH_Bz5ubEhH6-zcXVvWcaXDq5Pvf_4iDDX1bpmsMBU8W13R9J4sd7Rxb86iuJfHsvSPA63V8BdSobVEj68X-NxNZVfnwgvZyR7dPPPQ5AogCeGfHx6YwbGXAvWdW3M6Rj8hRw9mbEmrpZ8XWdabHuK6CZJLs_SXE3nT5EO2RVX5Vv-PmAFXNQD9IrXm-jQA1BjLvns0IF0LADK12xqJ-y_mWOZpynJgpiAUW7v0H3fTw5NsyoIuv61VWSs8foFmrbDm9DvJ0VmeRcHNhU8OSx2pg85YE1IsmoAfx7vjJeutnJX-QW5s3TGSYxlQg2DcqZqS8li6bDz6X1LAWwDPba7WIcktIgQOuAyhVU_bdLMVdc1J9OeQBviZxvEJJT8t-Lim61gmrTbPfr6oYF-gVQm7fwjEE-G7Ee6oGdFW1bzP8iiCH4l8bR_RQHTphP3ylzBN0IQIK_rikTaVQLKB0v_oBkXiBTMDOstcgLhgA7JhZv50W7ysGwDPCt6UtAIlSees9dfSASAt272-aLFduISuusaD9AL9yN7VBIMijhdonmC8fJG7FAPMQf_8P2B63MefnJmBakS9NY19KsFk6bTO6ry8JQKqbBD98wzVWtc578",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8000/api/admin/products",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"admin",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Porudct Store",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOGIyMjg1ZWM2MjQ1MjQ2NTAyYjM1MDhkMThiNTI3M2VlYjA1MGM5YjQ0YTY2ZmRiMGUyMjE0NWY5MDQ3NTExY2I0ZGU1MzE1NzM5YWQ5ZTQiLCJpYXQiOjE2Nzg1MTQxNTguNjcxNzQ1LCJuYmYiOjE2Nzg1MTQxNTguNjcxNzQ5LCJleHAiOjE3MTAxMzY1NTguNjE5ODM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.FN6kVscQU9kd1ECgBi75eGUDlKQ8sXC6w4EJwytA0YWxwIDPDsyje0CuOrY1gCCH_Bz5ubEhH6-zcXVvWcaXDq5Pvf_4iDDX1bpmsMBU8W13R9J4sd7Rxb86iuJfHsvSPA63V8BdSobVEj68X-NxNZVfnwgvZyR7dPPPQ5AogCeGfHx6YwbGXAvWdW3M6Rj8hRw9mbEmrpZ8XWdabHuK6CZJLs_SXE3nT5EO2RVX5Vv-PmAFXNQD9IrXm-jQA1BjLvns0IF0LADK12xqJ-y_mWOZpynJgpiAUW7v0H3fTw5NsyoIuv61VWSs8foFmrbDm9DvJ0VmeRcHNhU8OSx2pg85YE1IsmoAfx7vjJeutnJX-QW5s3TGSYxlQg2DcqZqS8li6bDz6X1LAWwDPba7WIcktIgQOuAyhVU_bdLMVdc1J9OeQBviZxvEJJT8t-Lim61gmrTbPfr6oYF-gVQm7fwjEE-G7Ee6oGdFW1bzP8iiCH4l8bR_RQHTphP3ylzBN0IQIK_rikTaVQLKB0v_oBkXiBTMDOstcgLhgA7JhZv50W7ysGwDPCt6UtAIlSees9dfSASAt272-aLFduISuusaD9AL9yN7VBIMijhdonmC8fJG7FAPMQf_8P2B63MefnJmBakS9NY19KsFk6bTO6ry8JQKqbBD98wzVWtc578",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Pencil",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "15",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is a Pencil",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/products/store/",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"store",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Porudct Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOGIyMjg1ZWM2MjQ1MjQ2NTAyYjM1MDhkMThiNTI3M2VlYjA1MGM5YjQ0YTY2ZmRiMGUyMjE0NWY5MDQ3NTExY2I0ZGU1MzE1NzM5YWQ5ZTQiLCJpYXQiOjE2Nzg1MTQxNTguNjcxNzQ1LCJuYmYiOjE2Nzg1MTQxNTguNjcxNzQ5LCJleHAiOjE3MTAxMzY1NTguNjE5ODM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.FN6kVscQU9kd1ECgBi75eGUDlKQ8sXC6w4EJwytA0YWxwIDPDsyje0CuOrY1gCCH_Bz5ubEhH6-zcXVvWcaXDq5Pvf_4iDDX1bpmsMBU8W13R9J4sd7Rxb86iuJfHsvSPA63V8BdSobVEj68X-NxNZVfnwgvZyR7dPPPQ5AogCeGfHx6YwbGXAvWdW3M6Rj8hRw9mbEmrpZ8XWdabHuK6CZJLs_SXE3nT5EO2RVX5Vv-PmAFXNQD9IrXm-jQA1BjLvns0IF0LADK12xqJ-y_mWOZpynJgpiAUW7v0H3fTw5NsyoIuv61VWSs8foFmrbDm9DvJ0VmeRcHNhU8OSx2pg85YE1IsmoAfx7vjJeutnJX-QW5s3TGSYxlQg2DcqZqS8li6bDz6X1LAWwDPba7WIcktIgQOuAyhVU_bdLMVdc1J9OeQBviZxvEJJT8t-Lim61gmrTbPfr6oYF-gVQm7fwjEE-G7Ee6oGdFW1bzP8iiCH4l8bR_RQHTphP3ylzBN0IQIK_rikTaVQLKB0v_oBkXiBTMDOstcgLhgA7JhZv50W7ysGwDPCt6UtAIlSees9dfSASAt272-aLFduISuusaD9AL9yN7VBIMijhdonmC8fJG7FAPMQf_8P2B63MefnJmBakS9NY19KsFk6bTO6ry8JQKqbBD98wzVWtc578",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Pen 2",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "20",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "This is a pen 2",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8000/api/products/update/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
